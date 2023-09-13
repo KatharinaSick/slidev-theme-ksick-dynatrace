@@ -13,7 +13,7 @@
 
           <div class="contact-container">
             <p class="name">{{speaker}}</p>
-            <p class="website">🔗&nbsp;&nbsp;{{website}}</p>
+            <p class="website">🔗&nbsp;&nbsp;<a :href=url>{{ website }}</a></p>
           </div>
         </div>
       </div>
@@ -24,15 +24,19 @@
 
 <script setup>
 import Footer from "../components/Footer.vue";
-import {defineProps} from 'vue';
+import {defineProps, computed} from 'vue';
 
-defineProps({
+const props = defineProps({
   eventName: {type: String},
   eventDate: {type: String},
   image: {type: String},
   speaker: {type: String},
   jobTitle: {type: String},
   website: {type: String},
+})
+
+const url = computed(() => {
+  return 'https://' + props.website
 })
 </script>
 

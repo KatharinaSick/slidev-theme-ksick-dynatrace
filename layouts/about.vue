@@ -10,7 +10,7 @@
           <h2 class="hello">Hello!</h2>
           <h1 class="name">{{ speaker }}</h1>
           <p class="job-title">🚀&nbsp;&nbsp;{{ jobTitle }} @Dynatrace </p>
-          <p class="website">🔗&nbsp;&nbsp;{{ website }}</p>
+          <p class="website">🔗&nbsp;&nbsp;<a :href=url>{{ website }}</a></p>
         </div>
       </div>
     </div>
@@ -20,15 +20,19 @@
 
 <script setup>
 import Footer from "../components/Footer.vue";
-import {defineProps} from 'vue';
+import {defineProps, computed} from 'vue';
 
-defineProps({
+const props = defineProps({
   eventName: {type: String},
   eventDate: {type: String},
   image: {type: String},
   speaker: {type: String},
   jobTitle: {type: String},
   website: {type: String},
+})
+
+const url = computed(() => {
+  return 'https://' + props.website
 })
 </script>
 
