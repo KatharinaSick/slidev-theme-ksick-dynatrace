@@ -32,6 +32,11 @@ p {
     padding-bottom: 32px;
 }
 
+.slidev-layout.image-left, .slidev-layout.image-right, .slidev-layout.iframe-left, .slidev-layout.iframe-right {
+    padding: 0;
+    margin: 0;
+}
+
 .slidev-layout.cover, .slidev-layout.about, .slidev-layout.outro-speaker {
     text-align: center;
     @apply h-full grid;
