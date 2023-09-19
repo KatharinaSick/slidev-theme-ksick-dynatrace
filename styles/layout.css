@@ -32,6 +32,10 @@ p {
     padding-bottom: 32px;
 }
 
+a:hover {
+    color: var(--blue) !important;
+}
+
 .slidev-layout.image-left, .slidev-layout.image-right, .slidev-layout.iframe-left, .slidev-layout.iframe-right {
     padding: 0;
     margin: 0;
