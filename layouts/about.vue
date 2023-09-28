@@ -9,7 +9,7 @@
         <div class="info-container">
           <h2 class="hello">Hello!</h2>
           <h1 class="name">{{ speaker }}</h1>
-          <p class="job-title">🚀&nbsp;&nbsp;{{ jobTitle }} @Dynatrace </p>
+          <p class="job-title">🚀&nbsp;&nbsp;{{ jobTitle }} at Dynatrace </p>
           <p class="website">🔗&nbsp;&nbsp;<a :href=url>{{ website }}</a></p>
         </div>
       </div>

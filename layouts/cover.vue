@@ -4,7 +4,7 @@
       <div class="my-auto w-full">
         <span v-if="speaker && jobTitle" class="spacer"/>
         <slot/>
-        <span v-if="speaker && jobTitle" class="presenter">{{ speaker }}, {{ jobTitle }} @Dynatrace</span>
+        <span v-if="speaker && jobTitle" class="presenter">{{ speaker }}, {{ jobTitle }} at Dynatrace</span>
       </div>
     </div>
     <Footer :event-name="eventName" :eventDate="eventDate"/>

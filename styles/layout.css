@@ -50,6 +50,7 @@ a:hover {
         padding: 12px 0;
 
         font-size: 48px;
+        margin-bottom: 0;
     }
 
     :is(h2) {
