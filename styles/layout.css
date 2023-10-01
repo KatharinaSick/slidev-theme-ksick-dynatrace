@@ -13,6 +13,26 @@
     flex-grow: 1;
 }
 
+.blue {
+    color: var(--blue);
+}
+
+.green {
+    color: var(--green);
+}
+
+.purple {
+    color: var(--purple);
+}
+
+.gradient {
+    display: inline-block;
+
+    background-image: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 h1 {
     display: inline-block;
     /* We need a bit of padding because otherwise the gradient could be cut off in the top & bottom */
@@ -22,9 +42,7 @@ h1 {
 
     font-size: 40px;
 
-    background-image: var(--gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: white;
 }
 
 p {
@@ -51,6 +69,10 @@ a:hover {
 
         font-size: 48px;
         margin-bottom: 0;
+
+        background-image: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     :is(h2) {
