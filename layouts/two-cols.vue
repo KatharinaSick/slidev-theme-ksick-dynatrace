@@ -1,8 +1,11 @@
 <template>
   <div>
-    <div class="slidev-layout two-cols">
-      <div class="my-auto">
-        <slot/>
+    <div class="slidev-layout two-columns w-full h-full grid grid-cols-2">
+      <div class="col-left">
+        <slot />
+      </div>
+      <div class="col-right">
+        <slot name="right" />
       </div>
     </div>
     <Footer :event-name="eventName" :eventDate="eventDate"/>

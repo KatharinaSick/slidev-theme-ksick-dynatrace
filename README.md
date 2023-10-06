@@ -115,27 +115,6 @@ jobTitle: Senior Software Engineer
 |-------------------------------------------------------------------------------------------------------------------|-------------------|
 | ![Cover](https://raw.githubusercontent.com/KatharinaSick/slidev-theme-ksick-dynatrace/main/screenshots/cover.png) | Not yet supported |
 
-### Custom `custom`
-
-An empty slide with a container where `positon: relative` is set and therefore allows you to add custom elements
-with `position: absolute` across the whole Slide.
-
-> NOTE: According to the Slidev docs you can always assume a slide size of 980x552 pixels
-
-#### Usage
-
-```
----
-layout: custom
----
-```
-
-#### Screenshots
-
-| Dark                                                                                                                | Light             |
-|---------------------------------------------------------------------------------------------------------------------|-------------------|
-| ![Custom](https://raw.githubusercontent.com/KatharinaSick/slidev-theme-ksick-dynatrace/main/screenshots/custom.png) | Not yet supported |
-
 ### Image Center `image-center`
 
 Shows an image in the center of the slide

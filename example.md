@@ -29,16 +29,6 @@ layout: center
 This is a `center` slide
 
 ---
-layout: custom
----
-
-# Custom
-
-This is a `custom` slide
-
-<span style="position: absolute; left: 200px; top: 200px">🏗️</span>
-
----
 layout: image-center
 image: 'https://source.unsplash.com/collection/94734566/1920x1080'
 ---
@@ -63,6 +53,38 @@ function updateUser(id: number, update: Partial<User>) {
   saveUser(id, newUser)
 }
 ```
+
+---
+layout: two-cols
+---
+
+# Left
+
+This shows on the left
+
+::right::
+
+# Right
+
+This shows on the right
+
+---
+layout: two-cols-header
+---
+
+# This spans both
+
+::left::
+
+# Left
+
+This shows on the left
+
+::right::
+
+# Right
+
+This shows on the right
 
 ---
 layout: outro-speaker
