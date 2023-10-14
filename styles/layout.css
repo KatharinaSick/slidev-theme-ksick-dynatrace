@@ -54,6 +54,33 @@ a:hover {
     color: var(--blue) !important;
 }
 
+ol {
+    list-style-type: none;
+    list-style-position: inside;
+    counter-reset: hash-counter;
+}
+
+ol > li {
+    list-style-type: none;
+    list-style-position: inside;
+    text-indent: -1em;
+    counter-increment: hash-counter;
+}
+
+ol > li:before {
+    content: "#" counter(hash-counter);
+    counter-increment: list;
+    font-weight: bold;
+    float: left;
+    width: 2em;
+    color: grey;
+}
+
+ul > li {
+    list-style-type: '👉 ';
+    padding-inline-start: 1ch;
+}
+
 li {
     font-size: 30px;
 }
