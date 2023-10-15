@@ -23,6 +23,7 @@ defineProps({
     <div class="col-right">
       <slot name="right" />
     </div>
+    <Footer :event-name="eventName" :eventDate="eventDate"/>
   </div>
 </template>
 
