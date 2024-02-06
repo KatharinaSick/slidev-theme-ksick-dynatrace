@@ -39,7 +39,8 @@
         "sans": "Poppins",
         "mono": "Fira Code"
       },
-      "hightlighter": "prism"
+      "hightlighter": "prism",
+      "favicon": "favicon.png"
     }
   }
 }
