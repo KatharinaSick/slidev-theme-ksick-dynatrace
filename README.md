@@ -165,6 +165,33 @@ website: ksick.dev
 |-----------------------------------------------------------------------------------------------------------------------------------|-------------------|
 | ![Outro Speaker](https://raw.githubusercontent.com/KatharinaSick/slidev-theme-ksick-dynatrace/main/screenshots/outro-speaker.png) | Not yet supported |
 
+### Feedback `feedback`
+
+Shows feedback slides that include QR codes to a feedback form and LinkedIn profile.
+
+#### Properties
+
+- `header`: The header of the feedback slide
+- `feedbackQR`: Reference to the feedback form QR code. Could be a URL or a local file
+- `linkedinQR`: Reference to the Linkedin profile QR code. Could be a URL or a local file
+
+#### Usage
+
+```
+---
+layout: feedback
+header: Thanks you for listening! ❤️
+feedbackQR: qr-feedback.svg
+linkedinQR: qr-linkedin.svg
+---
+```
+
+#### Screenshots
+
+| Dark                                                                                                                              | Light             |
+|-----------------------------------------------------------------------------------------------------------------------------------|-------------------|
+| ![Feedback](https://raw.githubusercontent.com/KatharinaSick/slidev-theme-ksick-dynatrace/main/screenshots/feedback.png) | Not yet supported |
+
 ## Components
 
 ### Footer
