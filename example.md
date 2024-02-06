@@ -106,3 +106,10 @@ image: 'https://ksick.dev/resources/pictures/me/drawings/headphones.png'
 speaker: Katharina Sick
 website: ksick.dev
 ---
+
+---
+layout: feedback
+header: Thanks you for listening! ❤️
+feedbackQR: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/QR_Code_Model_1_Example.svg/1200px-QR_Code_Model_1_Example.svg.png"
+linkedinQR: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/QR_Code_Model_1_Example.svg/1200px-QR_Code_Model_1_Example.svg.png"
+---
