@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <Footer :event-name="eventName" :eventDate="eventDate"/>
+    <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
   </div>
 </template>
 
@@ -32,6 +32,9 @@ defineProps({
   },
   eventDate: {
     type: String
+  },
+  showDynatraceLogo: {
+    type: Boolean,
   }
 })
 </script>

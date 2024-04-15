@@ -5,7 +5,8 @@
         <slot/>
       </div>
     </div>
-    <Footer :event-name="eventName" :eventDate="eventDate"/>
+    <img v-if="backgroundImage" class="image" :src="backgroundImage"/>
+    <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
   </div>
 </template>
 
@@ -19,6 +20,22 @@ defineProps({
   },
   eventDate: {
     type: String
+  },
+  showDynatraceLogo: {
+    type: Boolean,
+  },
+  backgroundImage: {
+    type: String
   }
 })
 </script>
+
+<style scoped>
+.image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+</style>

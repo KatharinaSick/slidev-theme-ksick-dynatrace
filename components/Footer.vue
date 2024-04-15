@@ -4,8 +4,8 @@
     <span class="footer-divider"/>
     <p class="footer-text">{{eventDate}}</p>
     <span class="flex-spacer"/>
-    <simple-icons-dynatrace class="footer-logo"/>
-    <span class="footer-divider"/>
+    <simple-icons-dynatrace v-if="showDynatraceLogo" class="footer-logo"/>
+    <span v-if="showDynatraceLogo" class="footer-divider"/>
     <p class="footer-text">
       <SlideCurrentNo class="footer-line-number"/>
     </p>
@@ -21,6 +21,10 @@ defineProps({
   },
   eventDate: {
     type: String
+  },
+  showDynatraceLogo: {
+    type: Boolean,
+    default: true
   }
 })
 </script>

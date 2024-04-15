@@ -12,19 +12,19 @@
           <h2 class="hello">Get in Touch</h2>
 
           <div class="contact-container">
-            <p class="name">{{speaker}}</p>
+            <p class="name">{{ speaker }}</p>
             <p class="website">🔗&nbsp;&nbsp;<a :href=url>{{ website }}</a></p>
           </div>
         </div>
       </div>
     </div>
-    <Footer :event-name="eventName" :eventDate="eventDate"/>
+    <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
   </div>
 </template>
 
 <script setup>
 import Footer from "../components/Footer.vue";
-import {defineProps, computed} from 'vue';
+import {computed, defineProps} from 'vue';
 
 const props = defineProps({
   eventName: {type: String},
@@ -33,6 +33,7 @@ const props = defineProps({
   speaker: {type: String},
   jobTitle: {type: String},
   website: {type: String},
+  showDynatraceLogo: {type: Boolean}
 })
 
 const url = computed(() => {

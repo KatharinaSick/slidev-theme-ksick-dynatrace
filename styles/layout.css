@@ -90,7 +90,7 @@ li {
     margin: 0;
 }
 
-.slidev-layout.cover, .slidev-layout.about, .slidev-layout.outro-speaker {
+.slidev-layout.cover, .slidev-layout.speaker, .slidev-layout.two-speakers, .slidev-layout.outro-speaker {
     text-align: center;
     @apply h-full grid;
 

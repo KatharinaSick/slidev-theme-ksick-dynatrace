@@ -2,12 +2,13 @@
   <div>
     <div class="slidev-layout cover">
       <div class="my-auto w-full">
-        <span v-if="speaker && jobTitle" class="spacer"/>
+        <span v-if="speaker" class="spacer"/>
         <slot/>
-        <span v-if="speaker && jobTitle" class="presenter">{{ speaker }}, {{ jobTitle }} at Dynatrace</span>
+        <span v-if="speaker" class="presenter">{{ speaker }}</span>
       </div>
     </div>
-    <Footer :event-name="eventName" :eventDate="eventDate"/>
+    <img v-if="backgroundImage" class="image" :src="backgroundImage"/>
+    <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
   </div>
 </template>
 
@@ -19,7 +20,8 @@ defineProps({
   eventName: {type: String},
   eventDate: {type: String},
   speaker: {type: String},
-  jobTitle: {type: String},
+  showDynatraceLogo: {type: Boolean},
+  backgroundImage: {type: String}
 })
 </script>
 
@@ -35,5 +37,12 @@ defineProps({
   font-size: 16px;
   color: #7a7a7a;
   margin-top: 48px;
+}
+.image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
 }
 </style>

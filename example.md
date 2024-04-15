@@ -5,7 +5,6 @@ defaults:
   eventName: Slidev Theme Demo
   eventDate: September 10, 2023
 speaker: Katharina Sick
-jobTitle: Senior Software Engineer
 ---
 
 # Slidev Theme: ksick-dynatrace
@@ -13,10 +12,10 @@ jobTitle: Senior Software Engineer
 My Personal Dynatrace Theme for Slidev
 
 ---
-layout: about
-image: 'https://ksick.dev/resources/pictures/me/drawings/headphones.png'
+layout: speaker
+image: 'https://raw.githubusercontent.com/KatharinaSick/PresentationMaterials/main/About/Headphones.jpg'
 speaker: Katharina Sick
-jobTitle: Senior Software Engineer
+description: Senior Software Engineer at Dynatrace
 website: ksick.dev
 ---
 
@@ -102,7 +101,7 @@ This shows on the right
 
 ---
 layout: outro-speaker
-image: 'https://ksick.dev/resources/pictures/me/drawings/headphones.png'
+image: 'https://raw.githubusercontent.com/KatharinaSick/PresentationMaterials/main/About/Headphones.jpg'
 speaker: Katharina Sick
 website: ksick.dev
 ---

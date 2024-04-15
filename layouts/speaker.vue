@@ -1,20 +1,20 @@
 <template>
   <div>
-    <div class="slidev-layout about">
+    <div class="slidev-layout speaker">
       <div class="my-auto w-full container">
         <div class="image-container">
-          <span class="image-border"/>
+          <span v-if="!transparentImage" class="image-border"/>
           <img :alt="speaker" :src="image" class="image"/>
         </div>
         <div class="info-container">
           <h2 class="hello">Hello!</h2>
           <h1 class="name">{{ speaker }}</h1>
-          <p class="job-title">🚀&nbsp;&nbsp;{{ jobTitle }} at Dynatrace </p>
+          <p class="job-title">🚀&nbsp;&nbsp;{{ description }}</p>
           <p class="website">🔗&nbsp;&nbsp;<a :href=url>{{ website }}</a></p>
         </div>
       </div>
     </div>
-    <Footer :event-name="eventName" :eventDate="eventDate"/>
+    <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
   </div>
 </template>
 
@@ -27,8 +27,10 @@ const props = defineProps({
   eventDate: {type: String},
   image: {type: String},
   speaker: {type: String},
-  jobTitle: {type: String},
+  description: {type: String},
   website: {type: String},
+  transparentImage: {type: Boolean, default: false},
+  showDynatraceLogo: {type: Boolean}
 })
 
 const url = computed(() => {

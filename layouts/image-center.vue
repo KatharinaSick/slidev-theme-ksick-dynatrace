@@ -5,7 +5,7 @@
         <img class="image" :src="image" />
       </div>
     </div>
-    <Footer :event-name="eventName" :eventDate="eventDate" />
+    <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo" />
   </div>
 </template>
 
@@ -22,6 +22,9 @@ defineProps({
   },
   image: {
     type: String
+  },
+  showDynatraceLogo: {
+    type: Boolean,
   }
 })
 </script>

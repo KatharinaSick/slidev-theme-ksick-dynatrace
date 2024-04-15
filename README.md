@@ -43,7 +43,7 @@ The footer will then look like this:
 
 ![Footer](https://raw.githubusercontent.com/KatharinaSick/slidev-theme-ksick-dynatrace/main/screenshots/footer.png)
 
-### About `about`
+### Speaker `speaker`
 
 Shows information about the speaker.
 
