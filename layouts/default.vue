@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div class="slidev-layout">
       <div class="my-auto">
         <slot/>
@@ -7,7 +6,6 @@
     </div>
     <img v-if="backgroundImage" class="image" :src="backgroundImage"/>
     <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
-  </div>
 </template>
 
 <script setup>

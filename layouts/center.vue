@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <div class="slidev-layout center">
-      <div class="container">
-        <slot/>
-      </div>
+  <div class="slidev-layout center">
+    <div class="container">
+      <slot/>
     </div>
-    <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
   </div>
+  <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
 </template>
 
 <script setup>

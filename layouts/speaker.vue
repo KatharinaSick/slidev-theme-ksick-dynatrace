@@ -1,26 +1,24 @@
 <template>
-  <div>
     <div class="slidev-layout speaker">
       <div class="my-auto w-full container">
-        <div class="image-container">
-          <span v-if="!transparentImage" class="image-border"/>
-          <img :alt="speaker" :src="image" class="image"/>
+          <div class="image-container">
+            <span v-if="!transparentImage" class="image-border"/>
+            <img :alt="speaker" :src="image" class="image"/>
+          </div>
+          <div class="info-container">
+            <h2 class="hello">Hello!</h2>
+            <h1 class="name">{{ speaker }}</h1>
+            <p class="job-title">🚀&nbsp;&nbsp;{{ description }}</p>
+            <p class="website">🔗&nbsp;&nbsp;<a :href=url>{{ website }}</a></p>
+          </div>
         </div>
-        <div class="info-container">
-          <h2 class="hello">Hello!</h2>
-          <h1 class="name">{{ speaker }}</h1>
-          <p class="job-title">🚀&nbsp;&nbsp;{{ description }}</p>
-          <p class="website">🔗&nbsp;&nbsp;<a :href=url>{{ website }}</a></p>
-        </div>
-      </div>
     </div>
     <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
-  </div>
 </template>
 
 <script setup>
 import Footer from "../components/Footer.vue";
-import {defineProps, computed} from 'vue';
+import {computed, defineProps} from 'vue';
 
 const props = defineProps({
   eventName: {type: String},

@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <div class="slidev-layout image-left">
-      <div class="container">
-        <img :alt="alt" :src="image" class="image"/>
-        <div class="content">
-          <slot/>
-        </div>
+  <div class="slidev-layout image-left">
+    <div class="container">
+      <img :alt="alt" :src="image" class="image"/>
+      <div class="content">
+        <slot/>
       </div>
     </div>
-    <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
   </div>
+  <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
 </template>
 
 <script setup>

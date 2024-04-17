@@ -1,35 +1,33 @@
 <template>
-  <div>
-    <div class="slidev-layout two-speakers">
-      <div class="my-auto w-full container">
-        <div class="speaker-container">
+  <div class="slidev-layout two-speakers">
+    <div class="my-auto w-full container">
+      <div class="speaker-container">
 
-          <div class="info-container">
-            <h1 class="name">{{ speaker1 }}</h1>
-            <p class="job-title">🚀&nbsp;&nbsp;{{ description1 }}</p>
-            <p class="website">🔗&nbsp;&nbsp;<a :href=url>{{ website1 }}</a></p>
-          </div>
-          <div class="image-container">
-            <span v-if="!transparentImages" class="image-border"/>
-            <img :alt="speaker1" :src="image1" class="image"/>
-          </div>
+        <div class="info-container">
+          <h1 class="name">{{ speaker1 }}</h1>
+          <p class="job-title">🚀&nbsp;&nbsp;{{ description1 }}</p>
+          <p class="website">🔗&nbsp;&nbsp;<a :href=url>{{ website1 }}</a></p>
         </div>
-        <div class="speaker-container">
-          <div class="image-container">
-            <span v-if="!transparentImages" class="image-border"/>
-            <img :alt="speaker2" :src="image2" class="image"/>
-          </div>
-          <div class="info-container">
-            <h1 class="name">{{ speaker2 }}</h1>
-            <p class="job-title">🚀&nbsp;&nbsp;{{ description2 }}</p>
-            <p class="website">🔗&nbsp;&nbsp;<a :href=url>{{ website2 }}</a></p>
-          </div>
+        <div class="image-container">
+          <span v-if="!transparentImages" class="image-border"/>
+          <img :alt="speaker1" :src="image1" class="image"/>
+        </div>
+      </div>
+      <div class="speaker-container">
+        <div class="image-container">
+          <span v-if="!transparentImages" class="image-border"/>
+          <img :alt="speaker2" :src="image2" class="image"/>
+        </div>
+        <div class="info-container">
+          <h1 class="name">{{ speaker2 }}</h1>
+          <p class="job-title">🚀&nbsp;&nbsp;{{ description2 }}</p>
+          <p class="website">🔗&nbsp;&nbsp;<a :href=url>{{ website2 }}</a></p>
         </div>
       </div>
     </div>
-
-    <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
   </div>
+
+  <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
 </template>
 
 <script setup>

@@ -1,19 +1,17 @@
 <template>
-  <div>
-    <div class="slidev-layout iframe-left">
-      <div class="container">
-        <iframe
-            id="frame" class="w-full h-full"
-            :src="url"
-            :style="scale ? { transform: `scale(${scale})`, transformOrigin: 'top left' } : {}"
-        />
-        <div class="content">
-          <slot/>
-        </div>
+  <div class="slidev-layout iframe-left">
+    <div class="container">
+      <iframe
+          id="frame" class="w-full h-full"
+          :src="url"
+          :style="scale ? { transform: `scale(${scale})`, transformOrigin: 'top left' } : {}"
+      />
+      <div class="content">
+        <slot/>
       </div>
     </div>
-    <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
   </div>
+  <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
 </template>
 
 <script setup>

@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <div class="slidev-layout image-full">
-      <img class="image" :src="image"/>
-    </div>
-    <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
+  <div class="slidev-layout image-full">
+    <img class="image" :src="image"/>
   </div>
+  <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
 </template>
 
 <script setup>

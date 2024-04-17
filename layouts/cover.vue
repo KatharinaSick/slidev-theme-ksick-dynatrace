@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <div class="slidev-layout cover">
-      <div class="my-auto w-full">
-        <span v-if="speaker" class="spacer"/>
-        <slot/>
-        <span v-if="speaker" class="presenter">{{ speaker }}</span>
-      </div>
+  <div class="slidev-layout cover">
+    <div class="my-auto w-full">
+      <span v-if="speaker" class="spacer"/>
+      <slot/>
+      <span v-if="speaker" class="presenter">{{ speaker }}</span>
     </div>
-    <img v-if="backgroundImage" class="image" :src="backgroundImage"/>
-    <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
   </div>
+  <img v-if="backgroundImage" class="image" :src="backgroundImage"/>
+  <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
 </template>
 
 <script setup>
@@ -30,6 +28,7 @@ defineProps({
   display: inline-block;
   height: 128px;
 }
+
 .presenter {
   width: 100%;
   display: inline-block;
@@ -38,6 +37,7 @@ defineProps({
   color: #7a7a7a;
   margin-top: 48px;
 }
+
 .image {
   position: absolute;
   bottom: 0;
