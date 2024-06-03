@@ -11,6 +11,9 @@ defineProps({
   },
   showDynatraceLogo: {
     type: Boolean,
+  },
+  showSlideNumber: {
+    type: Boolean
   }
 })
 </script>
@@ -26,7 +29,7 @@ defineProps({
     <div class="col-right">
       <slot name="right" />
     </div>
-    <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
+    <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo" :showSlideNumber="showSlideNumber"/>
   </div>
 </template>
 
