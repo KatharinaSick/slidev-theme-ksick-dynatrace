@@ -7,7 +7,7 @@
     </div>
   </div>
   <img v-if="backgroundImage" class="image" :src="backgroundImage"/>
-  <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
+  <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo" :showSlideNumber="showSlideNumber"/>
 </template>
 
 <script setup>
@@ -19,6 +19,7 @@ defineProps({
   eventDate: {type: String},
   speaker: {type: String},
   showDynatraceLogo: {type: Boolean},
+  showSlideNumber: {type: Boolean, default: false},
   backgroundImage: {type: String}
 })
 </script>

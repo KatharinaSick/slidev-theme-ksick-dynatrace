@@ -27,7 +27,7 @@
     </div>
   </div>
 
-  <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"/>
+  <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo" :showSlideNumber="showSlideNumber"/>
 </template>
 
 <script setup>
@@ -46,7 +46,8 @@ const props = defineProps({
   description2: {type: String},
   website2: {type: String},
   transparentImages: {type: Boolean, default: false},
-  showDynatraceLogo: {type: Boolean}
+  showDynatraceLogo: {type: Boolean},
+  showSlideNumber: {type: Boolean}
 })
 
 const url = computed(() => {
