@@ -1,19 +1,25 @@
 <template>
-    <div class="slidev-layout speaker">
-      <div class="my-auto w-full container">
-          <div class="image-container">
-            <span v-if="!transparentImage" class="image-border"/>
-            <img :alt="speaker" :src="image" class="image"/>
-          </div>
-          <div class="info-container">
-            <h2 class="hello">Hello!</h2>
-            <h1 class="name">{{ speaker }}</h1>
-            <p class="job-title">🚀&nbsp;&nbsp;{{ description }}</p>
-            <p class="website">🔗&nbsp;&nbsp;<a :href=url>{{ website }}</a></p>
-          </div>
+  <div class="slidev-layout speaker">
+    <div class="my-auto w-full container">
+      <div class="image-container">
+        <span v-if="!transparentImage" class="image-border"/>
+        <img :alt="speaker" :src="image" class="image"/>
+      </div>
+      <div class="info-container">
+        <h2 class="hello">Hello!</h2>
+        <h1 class="name">{{ speaker }}</h1>
+        <p class="job-title">🚀&nbsp;&nbsp;{{ description }}</p>
+        <p class="website">🔗&nbsp;&nbsp;<a :href=url>{{ website }}</a></p>
+        <div class="logos">
+          <a v-for="logo in logos" :href="logo.link" target="_blank" style="border: 0">
+            <img :alt="logo.alt" :src="logo.src" class="logo"/>
+          </a>
         </div>
+      </div>
     </div>
-    <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo" :showSlideNumber="showSlideNumber"/>
+  </div>
+  <Footer :event-name="eventName" :eventDate="eventDate" :show-dynatrace-logo="showDynatraceLogo"
+          :showSlideNumber="showSlideNumber"/>
 </template>
 
 <script setup>
@@ -27,6 +33,7 @@ const props = defineProps({
   speaker: {type: String},
   description: {type: String},
   website: {type: String},
+  logos: {type: Array},
   transparentImage: {type: Boolean, default: false},
   showDynatraceLogo: {type: Boolean},
   showSlideNumber: {type: Boolean}
@@ -104,5 +111,17 @@ const url = computed(() => {
 
 .job-title {
   margin-bottom: 12px;
+}
+
+.logos {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.logo {
+  display: inline-block;
+  height: 56px;
 }
 </style>

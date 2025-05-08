@@ -17,6 +17,13 @@ image: 'https://raw.githubusercontent.com/KatharinaSick/PresentationMaterials/ma
 speaker: Katharina Sick
 description: Senior Software Engineer at Dynatrace
 website: ksick.dev
+logos:
+  - src: 'https://cloudnativelinz.at/images/cloudnativelinz-logo.png'
+    alt: Cloud Native Linz
+    link: 'https://cloudnativelinz.at'
+  - src: 'https://raw.githubusercontent.com/cloud-native-austria/cloud-native-days-austria/refs/heads/main/Brand/Logo07_colorFerrisWheel_whiteCloud_transBG.png'
+    alt: Cloud Native Days Austria
+    link: 'https://cloudnativedays.at'
 ---
 
 ---
@@ -93,10 +100,3 @@ This shows on the left
 # Right
 
 This shows on the right
-
----
-layout: outro-speaker
-image: 'https://raw.githubusercontent.com/KatharinaSick/PresentationMaterials/main/About/Headphones.jpg'
-speaker: Katharina Sick
-website: ksick.dev
----
